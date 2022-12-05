@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def no_c(my_string):
     str = ""
     if "c" in my_string or "C" in my_string:
