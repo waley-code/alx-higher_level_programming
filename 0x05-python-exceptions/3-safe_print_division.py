@@ -2,9 +2,9 @@
 def safe_print_division(a, b):
     try:
         result = a/b
-        return result 
+        return result
     except Exception:
         result = None
-        return result      
+        return result
     finally:
         print("Inside result: {}".format(result))
