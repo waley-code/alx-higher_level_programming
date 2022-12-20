@@ -2,6 +2,8 @@
 """
     This is a module containing a class that defines a class square.
 """
+
+
 class Square:
     """
         This class defines class when instantiated.
@@ -52,14 +54,16 @@ class Square:
             raise TypeError if size != int
         """
         if (type(value) != (type((9, 5))) or len(value) != 2):
-            raise TypeError("position must be a tuple of 2 positive integers")            
+            raise TypeError("position must be a tuple of 2 positive integers")
         for i in value:
             if i < 0 or type(i) != int:
                 """
                     check for type inputed
                 """
-                raise TypeError("position must be a tuple of 2 positive integers")
+                n = "position must be a tuple of 2 positive integers"
+                raise TypeError(n)
         self.__position = value
+
     def area(self):
         """
             Calculates and returns the current square area
@@ -76,4 +80,5 @@ class Square:
             for r in range(self.__position[1]):
                 print()
             for i in range(self.__size):
-                print("{}{}".format(self.__position[0] * " ", self.__size * "#") )
+                n = self.__position[0] * " ", self.__size * "#"
+                print("{}{}".format(n))

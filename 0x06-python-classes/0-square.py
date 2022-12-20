@@ -2,6 +2,8 @@
 """
     Module containing a class.
 """
+
+
 class Square:
     """
         This is an empty class.

@@ -2,6 +2,8 @@
 """
     This is a module containing a class that defines a class square.
 """
+
+
 class Square:
     """
         This class defines class when instantiated.
@@ -51,4 +53,4 @@ class Square:
             print()
         else:
             for i in range(self.__size):
-                print("{}".format(self.__size * "#") )
+                print("{}".format(self.__size * "#"))
