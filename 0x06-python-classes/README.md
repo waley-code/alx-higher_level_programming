@@ -12,4 +12,4 @@
 
 ### 0-square.py
 
-    An empty class Square that defines a s
+    An empty class Square that defines a 
