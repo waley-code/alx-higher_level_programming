@@ -17,7 +17,7 @@
   </tr>
   <tr>
     <td>0x01-python-if_else_loops_functions </td>
-    <td>All about introduction to python. </td>
+    <td>All about conditions in python. </td>
   </tr>
 
 </table>
