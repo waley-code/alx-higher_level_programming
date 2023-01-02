@@ -17,7 +17,9 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         for i in range(self.__height):
-            acc += "{}\n".format('#' * self.__width)
+            acc += "{}".format("#" * self.__width)
+            if i is not self.__height - 1:
+                acc += "\n"
         return acc
 
     @property
