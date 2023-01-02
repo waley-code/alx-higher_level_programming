@@ -9,8 +9,8 @@ class Rectangle:
     """ defines a rectangle """
     def __init__(self, width=0, height=0):
         """Initializes width"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     def __str__(self):
         acc = ""
@@ -58,5 +58,5 @@ class Rectangle:
         """returns perimeter"""
         if self.height == 0 or self.width == 0:
             return 0
-        c = self.height + self.width
+        c = self.__height + self.__width
         return 2 * c
