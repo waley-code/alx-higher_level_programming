@@ -22,9 +22,9 @@ int check_pal(listint_t **head, listint_t *last)
 {
 	if (last == NULL)
 		return (1);
-	if (check_pal(head, last->next) && head->n == last->n)
+	if (check_pal(head, last->next) && (*head)->n == last->n)
 	{
-		*head = head->next;
+		*head = (*head)->next;
 		return (1);
 	}
 	return (0);
