@@ -15,6 +15,7 @@
     <td>[0x00-python-hello_world](0x00-python-hello_world) </td>
     <td>All about introduction to python. </td>
   </tr>
+<<<<<<< HEAD
    <tr>
     <td>0x01-python-if_else_loops_functions </td>
     <td>All about Python - if/else, loops, functions </td>
@@ -32,6 +33,12 @@
 <body>
 
 <h1>ALX HIGHER LEVEL PROGRAMMING</h1>
+=======
+  <tr>
+    <td>0x01-python-if_else_loops_functions </td>
+    <td>All about conditions in python. </td>
+  </tr>
+>>>>>>> 17ee6b49bbfd7ce368ae52054c47689ef9aff11d
 
 <table>
   <tr>
