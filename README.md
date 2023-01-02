@@ -36,7 +36,7 @@
 =======
   <tr>
     <td>0x01-python-if_else_loops_functions </td>
-    <td>All about conditions in python. </td>
+    <td>All about Python - if/else, loops, functions </td>
   </tr>
 >>>>>>> 17ee6b49bbfd7ce368ae52054c47689ef9aff11d
 
