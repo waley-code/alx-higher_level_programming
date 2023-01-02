@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """
 This is the "Rectangle"  module.
 This module provides a simple Rectangle class.
@@ -11,12 +11,12 @@ class Rectangle:
         """Initializes width"""
         self.__width = width
         self.__height = height
-    
+
     @property
     def width(self):
         """returns width"""
         return self.__width
-    
+
     @property
     def height(self):
         """returns height"""
@@ -31,7 +31,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @height.setter
     def height(self, value):
         """sets height private property"""

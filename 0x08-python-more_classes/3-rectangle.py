@@ -11,7 +11,7 @@ class Rectangle:
         """Initializes width"""
         self.__width = width
         self.__height = height
-    
+
     def __str__(self):
         acc = ""
         if self.__height == 0 or self.__width == 0:
@@ -24,7 +24,7 @@ class Rectangle:
     def width(self):
         """returns width"""
         return self.__width
-    
+
     @property
     def height(self):
         """returns height"""
@@ -39,7 +39,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @height.setter
     def height(self, value):
         """sets height private property"""
