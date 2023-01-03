@@ -3,4 +3,7 @@
 # Tasks
     0. Who am I?
          function used to print the type of an object
-            0-answer.txt
+            File: 0-answer.txt
+    1. Where are you?
+        name of the function variable identifier (which is the memory address in the CPython implementation)
+            File: 1-answer.txt
