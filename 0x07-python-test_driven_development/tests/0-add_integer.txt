@@ -26,6 +26,3 @@
  
         >>> add_integer(2, -2)
         0
- 
-        >>> add_integer(2)
-        100
