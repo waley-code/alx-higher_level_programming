@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """
-    Contains an empty class BaseGeometry.
+    Contains a class BaseGeometry which
+     inherit fr object
 """
 
 
-class BaseGeometry:
-    """ a BaseGeometry class"""
+class BaseGeometry(object):
+    """ a BaseGeometry class inherit from object"""
+
     def area(self):
         """
-            Raises an exception abot area 
+            Raises an exception about an area 
             method
         """
         raise Exception("area() is not implemented")

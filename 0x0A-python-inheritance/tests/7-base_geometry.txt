@@ -12,9 +12,6 @@ Numbers:
    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
    >>> bg = BaseGeometry()
 
-:: with positive integer
-   >>> bg.integer_validator("my_int", 12)
-
 :: with negative integer
    >>> bg.integer_validator("number", -12)
    Traceback (most recent call last):
