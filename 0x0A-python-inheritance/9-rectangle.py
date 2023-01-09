@@ -13,7 +13,6 @@ class Rectangle(BaseGeometry):
         return "[{}] {}/{}".format(type(self).__name__, self.__width, self.__height)
     
     def __init__(self, width, height):
-        super.__init__()
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
