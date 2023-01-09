@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Contains  an empty class BaseGeometry.
+    Contains an empty class BaseGeometry.
 """
 
 
@@ -14,5 +14,5 @@ class BaseGeometry:
         """Method that validates value"""
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
-        elif value <= 0:
+        if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
