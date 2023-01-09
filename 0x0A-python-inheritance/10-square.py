@@ -10,6 +10,12 @@ class Square(Rectangle):
     """Square class that inherits from BaseGeometry"""
     
     def __init__(self, size):
-        Rectangle.__init__(self, size, size)
+        super().__init__(size, size)
         self.integer_validator("size", size)
         self.__size = size
+
+
+s = Square(13)
+
+print(s)
+print(s.area())
