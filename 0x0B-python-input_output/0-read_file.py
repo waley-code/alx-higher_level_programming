@@ -9,5 +9,5 @@ def read_file(filename=""):
     reads a text file to stdout
     """
     with open(filename, 'r', encoding="utf-8") as rf:
-        readFile = rf.read()
-        print(readFile)
+        for i in rf:
+            print(i, end="")
