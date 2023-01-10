@@ -13,7 +13,7 @@ x = []
 
 if os.path.exists(filename):
     x = load_from_json_file(filename)
-for i in  argv[1:]:
+for i in argv[1:]:
     x.append(i)
 
-save_to_json_file( x, filename)
+save_to_json_file(x, filename)
