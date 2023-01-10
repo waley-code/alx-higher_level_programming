@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""Module of pascals triangle"""
-
-
 def pascal_triangle(n):
+    """ Pascal Triangle 1h"""
+    li = []
     if n <= 0:
-        return []
-    x = [1]
-    for row_num in range(n):
-        print(x)
-        previous = x[:]
-        for k in range(row_num):
-            x[k + 1] = previous[k] + previous[k + 1]
-        x.append(1)
+        return li
+    for r in range(n):
+        for c in range(r + 1):
+            if c == 0:
+                li.append([1])
+            elif c == r:
+                li[r].append(1)
+            else:
+                li[r].append(li[r - 1][c] + li[r - 1][c - 1])
+    return li
