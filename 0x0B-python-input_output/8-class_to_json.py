@@ -4,4 +4,4 @@
 
 def class_to_json(obj):
     """ return dict object"""
-    vars(obj)
+    return vars(obj)
