@@ -8,11 +8,12 @@ from sys import argv
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
+filename = "add_item.json"
 x = []
 
-if os.path.exists("add_item.json"):
-    x = load_from_json_file("add_item.json")
+if os.path.exists(filename):
+    x = load_from_json_file(filename)
 for i in  argv[1:]:
     x.append(i)
 
-save_to_json_file( x, "add_item.json")
+save_to_json_file( x, filename)
