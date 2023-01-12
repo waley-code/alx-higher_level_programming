@@ -8,7 +8,7 @@ def pascal_triangle(n):
     x = [1]
     for row_num in range(n):
         for i in x:
-            print(i, end=" ")
+            print(i, end="")
         print()
         previous = x[:]
         for k in range(row_num):
