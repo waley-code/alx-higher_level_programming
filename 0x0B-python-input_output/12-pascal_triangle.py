@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """function printing pascal triangle"""
     ax = [[1]]
     if n <= 0:
         return []
