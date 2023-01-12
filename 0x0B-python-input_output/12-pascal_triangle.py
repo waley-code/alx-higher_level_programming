@@ -13,4 +13,4 @@ def pascal_triangle(n):
         for k in range(row_num):
             x[k + 1] = previous[k] + previous[k + 1]
         x.append(1)
-    return ax[:]
+    return ax
