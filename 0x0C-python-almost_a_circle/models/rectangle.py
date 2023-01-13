@@ -7,20 +7,20 @@ class Rectangle(Base):
     """rectangle clase"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        type(self).__width = width
-        type(self).__height = height
-        type(self).__x = x
-        type(self).__y = y
+        type(self).width = width
+        type(self).height = height
+        type(self).x = x
+        type(self).y = y
 
     def __str__(self):
         """prints strings of class"""
         x = "[{}] ({}) {}/{} - {}/{}"
         rN = type(self).__name__
         rId = self.id
-        rX = self.__x
-        rY = self.__y
-        rW = self.__width
-        rH = self.__height
+        rX = self.x
+        rY = self.y
+        rW = self.width
+        rH = self.height
         return x.format(rN, rId, rX, rY, rW, rH)
 
     @property
@@ -35,7 +35,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if arg <= 0:
             raise ValueError("width must be > 0")
-        self.__width = arg
+        type(self).__width = arg
     
     @property
     def height(self):
@@ -101,31 +101,36 @@ class Rectangle(Base):
                 self.id = x[0]
             if len(x) == 2:
                 self.id = x[0]
-                self.__width = x[1]
+                self.width = x[1]
             if len(x) == 3:
                 self.id = x[0]
-                self.__width = x[1]
-                self.__height = x[2]
+                self.width = x[1]
+                self.height = x[2]
             if len(x) == 4:
                 self.id = x[0]
-                self.__width = x[1]
-                self.__height = x[2]
-                self.__x = x[3]
+                self.width = x[1]
+                self.height = x[2]
+                self.x = x[3]
             if len(x) == 5:
                 self.id = x[0]
-                self.__width = x[1]
-                self.__height = x[2]
-                self.__x = x[3]
-                self.__y = x[4]
+                self.width = x[1]
+                self.height = x[2]
+                self.x = x[3]
+                self.y = x[4]
         else:
             for key, value in kwargs.items():
                 if key == "height":
-                    self.__height = value
+                    self.height = value
                 if key == "width":
-                    self.__width = value
+                    self.width = value
                 if key == "x":
-                    self.__x = value
+                    self.x = value
                 if key == "y":
-                    self.__y = value
+                    self.y = value
                 if key == "id":
                     self.id = value
+
+    def to_dictionary(self):
+        iD = ["id","width", "height", "x", "y"]
+        dicty = type(self).__dict__
+        return {key : value for key, value in dicty.items() if key in iD}
