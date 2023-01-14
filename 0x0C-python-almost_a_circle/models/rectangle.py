@@ -6,11 +6,12 @@ from base import Base
 class Rectangle(Base):
     """rectangle clase"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """instatiation init method"""
         super().__init__(id)
-        type(self).width = width
-        type(self).height = height
-        type(self).x = x
-        type(self).y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     def __str__(self):
         """prints strings of class"""
@@ -35,7 +36,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if arg <= 0:
             raise ValueError("width must be > 0")
-        type(self).__width = arg
+        self.__width = arg
     
     @property
     def height(self):
@@ -81,13 +82,13 @@ class Rectangle(Base):
     
     def area(self):
         """returns rectangle area"""
-        return self.__height * self.__width
+        return self.height * self.width
     
     def display(self):
         """prints Rectangle instance with the character #"""
-        for i in range(self.__height):
-            print("{}".format(self.__x * " "), end="")
-            for j in range(self.__width):
+        for i in range(self.height):
+            print("{}".format(self.x * " "), end="")
+            for j in range(self.width):
                 print('#', end="")
             print()
     
@@ -120,17 +121,21 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 if key == "height":
-                    self.height = value
+                    type(self).height = value
                 if key == "width":
-                    self.width = value
+                    type(self).width = value
                 if key == "x":
-                    self.x = value
+                    type(self).x = value
                 if key == "y":
-                    self.y = value
+                    type(self).y = value
                 if key == "id":
-                    self.id = value
+                    type(self).id = value
 
     def to_dictionary(self):
-        iD = ["id","width", "height", "x", "y"]
-        dicty = type(self).__dict__
-        return {key : value for key, value in dicty.items() if key in iD}
+        """converts to dictionary"""
+        id = getattr(self, 'id')
+        width = getattr(self, 'width')
+        height = getattr(self, 'height')
+        x = getattr(self, 'x')
+        y = getattr(self, 'y')
+        return {"id" : id, "y" : y, "x" : x, "width" : width, "height" : height}
