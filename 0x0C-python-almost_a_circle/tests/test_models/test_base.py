@@ -72,3 +72,7 @@ class Test_BaseClass_create(unittest.TestCase):
       y = { 'y': 6, 'id': 56, 'size': 9, 'x': 1}
       x = Square.create(**y).to_dictionary()
       self.assertDictEqual(x, y)
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -129,7 +129,7 @@ class Rectangle(Base):
                 if key == "y":
                     type(self).y = value
                 if key == "id":
-                    type(self).id = value
+                    self.id = value
 
     def to_dictionary(self):
         """converts to dictionary"""
