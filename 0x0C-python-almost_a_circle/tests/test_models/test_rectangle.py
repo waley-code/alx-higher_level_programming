@@ -5,16 +5,16 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class test_rectangle_class(unittest.TestCase):
     """Tseting for the rectangle init method"""
     def setUp(self):
         Base.__nb_objects = 0
 
-
     def test_excess_arguments(self):
         """Testing with excess args
             expecting typeError
-        """  
+        """
         with self.assertRaises(TypeError):
             Rectangle(5, 6, 7, 1, 3, 9)
 
@@ -28,10 +28,9 @@ class test_rectangle_class(unittest.TestCase):
     def test_withSingle_argument(self):
         """Testing with single args
             expecting typeError
-        """       
+        """
         with self.assertRaises(TypeError):
             Rectangle(4)
-    
 
     def test_Rectangle_widthAndHeight(self):
         """
@@ -57,7 +56,6 @@ class test_rectangle_class(unittest.TestCase):
     def test_width_setAndGet(self):
         """
         testing the get and set method
-        
         """
         x = Rectangle(2, 3, 5, 2)
         with self.assertRaises(AttributeError):
@@ -73,7 +71,7 @@ class test_rectangle_class(unittest.TestCase):
         x = Rectangle(3, 4, 1, 3, 42)
         x.update(32, 10, 20, 50)
         self.assertEqual(str(x), "[Rectangle] (32) 50/3 - 10/20")
-    
+
     def test_dictionary_withBasic_argument(self):
         """
             Testing with basic args expecting error
@@ -88,7 +86,6 @@ class test_rectangle_class(unittest.TestCase):
         x = Rectangle(2, 3, 5, 3, 42)
         x.update(32, 10, 20, 52, 32)
         self.assertEqual(str(x), "[Rectangle] (32) 52/32 - 10/20")
-
 
 
 if __name__ == "__main__":
