@@ -11,6 +11,8 @@ class Base:
     def __init__(self, id=None):
         """Instantiate id vairable"""
         if id is not None:
+            if type(id) is not int:
+                raise TypeError("Enter integer not ")
             self.id = id
         else:
             type(self).__nb_objects += 1
