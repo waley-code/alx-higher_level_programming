@@ -1,5 +1,7 @@
 # JavaScript
 
+![image](https://user-images.githubusercontent.com/68809636/224645947-78b4fdda-21b3-47a3-abce-2545c73ac2db.png)
+
 ## Background Context
 JavaScript is used for many things. Here, you will use JavaScript for 2 reasons:
 
