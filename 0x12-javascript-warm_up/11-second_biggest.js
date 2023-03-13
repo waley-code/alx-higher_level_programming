@@ -7,9 +7,9 @@ if (args.length <= 1) {
   console.log(prev);
 } else {
   args.forEach(el => {
-    if (parseInt(el) > num) {
+    if (el > num) {
       prev = num;
-      num = parseInt(el);
+      num = el;
     }
   });
   console.log(prev);
