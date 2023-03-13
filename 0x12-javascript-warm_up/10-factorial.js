@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const args = process.argv.slice(1);
+const args = process.argv.slice(2);
 const first = parseInt(args[0]);
 
 function factorial (a) {
