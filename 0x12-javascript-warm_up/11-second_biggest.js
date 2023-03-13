@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const args = process.argv.slice(1);
+const args = process.argv.slice(2);
 let num = 0;
 let prev = 0;
 
