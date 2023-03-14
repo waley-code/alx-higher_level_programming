@@ -2,6 +2,7 @@
 
 const { list } = require('./100-data');
 let index = 0;
+
 const newList = list.map(function (par) {
   return par * index++;
 });
