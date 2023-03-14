@@ -2,19 +2,14 @@
 
 exports.converter = function (base) {
   return function (number) {
-    let result = '';
-    let quotient = number;
-
-    while (quotient > 0) {
-      const remainder = quotient % base;
-      quotient = Math.floor(quotient / base);
+    while (number >= 0) {
+      const remainder = number % base;
+      number = Math.floor(number / base);
       if (remainder < 10) {
-        result = remainder.toString() + result;
+        return remainder.toString() + '';
       } else {
-        result = String.fromCharCode(remainder + 87) + result;
+        return (String.fromCharCode(remainder + 87) + '') || '0';
       }
     }
-
-    return result || '0';
   };
 };

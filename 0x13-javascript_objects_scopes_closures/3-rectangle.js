@@ -9,15 +9,16 @@ class Rectangle {
         this.height = h;
       }
     }
-    this.print = function () {
-      for (let index = 0; index < h; index++) {
-        let x = '';
-        for (let ind = 0; ind < w; ind++) {
-          x += 'X';
-        }
-        console.log(x);
+  }
+
+  print () {
+    for (let index = 0; index < this.height; index++) {
+      let x = '';
+      for (let ind = 0; ind < this.width; ind++) {
+        x += 'X';
       }
-    };
+      console.log(x);
+    }
   }
 }
 
