@@ -10,6 +10,5 @@ const contents2 = fs.readFileSync(sourceFile2);
 
 // Concatenate the contents
 const concatenated = Buffer.concat([contents1, contents2]);
-
 // Write the concatenated contents to the destination file
 fs.writeFileSync(destFile, concatenated);
