@@ -1,0 +1,15 @@
+# JavaScript - Objects, Scopes and Closures
+## Object basics
+An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects).
+
+### Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+
+- Why JavaScript programming is amazing
+- How to create an object in JavaScript
+- What this means
+- What undefined means
+- Why the variable type and scope is important
+- What is a closure
+- What is a prototype
+- How to inherit an object from another
