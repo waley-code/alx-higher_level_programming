@@ -21,6 +21,7 @@ Without ORM:
     cur.close()
     conn.close()
 With an ORM:
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format("root", "root", "my_db"), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
