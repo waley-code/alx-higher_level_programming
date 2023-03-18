@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ a python file that contains the class definition of a State class
 """
 from sqlalchemy import Column, Integer, String
