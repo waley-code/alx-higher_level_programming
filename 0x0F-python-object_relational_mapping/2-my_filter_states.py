@@ -3,7 +3,7 @@
 
 import sys
 import MySQLdb
-import My
+
 
 
 if __name__ == "__main__":
@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          db=db_name)
     cur = db.cursor()
     query = "SELECT id, name FROM states WHERE name LIKE %s ORDER BY id"
-    cur.execute(query, (f"{state_name}%",))
+    cur.execute(query, (state_name,))
     for names in cur:
         print(names)
     cur.close()
