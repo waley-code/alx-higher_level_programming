@@ -22,10 +22,4 @@ if __name__ == "__main__":
     session.add(newS)
     session.add(newC)
     session.commit()
-    result = session.query(State).filter_by(name=newS.name).all()
-    if result:
-        for re in result:
-            print(f"{re.id}")
-    else:
-        print("Not found")
     session.close()

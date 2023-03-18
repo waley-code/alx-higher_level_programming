@@ -5,7 +5,6 @@ import sys
 import MySQLdb
 
 
-
 if __name__ == "__main__":
     filename, username, password, db_name, state_name = sys.argv
     db = MySQLdb.connect(host="localhost",
@@ -14,7 +13,7 @@ if __name__ == "__main__":
                          passwd=password,
                          db=db_name)
     cur = db.cursor()
-    query = "SELECT id, name FROM states WHERE name LIKE %s ORDER BY id"
+    query = "SELECT id, name FROM states WHERE name LIKE %s ORDER BY id ASC"
     cur.execute(query, (state_name,))
     for names in cur:
         print(names)
