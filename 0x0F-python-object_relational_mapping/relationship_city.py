@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" a python file that contains the class definition of a City class
-"""
+"""a python file that contains the class definition of a City class"""
 import sys
 from sqlalchemy import Column, Integer, String, ForeignKey
 from relationship_state import Base
