@@ -13,8 +13,8 @@ if __name__ == "__main__":
                          passwd=password,
                          db=db_name)
     cur = db.cursor()
-    query = "SELECT id, name FROM states WHERE name LIKE %s ORDER BY id ASC"
-    cur.execute(query, (state_name,))
+    query = "SELECT id, name FROM states WHERE name='{}' ORDER BY id ASC".format(state_name)
+    cur.execute(query)
     for names in cur:
         print(names)
     cur.close()
