@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a script that creates the State “California” with the"""
+"""a script that creates the State California with the"""
 
 import sys
 from sqlalchemy import (create_engine)
