@@ -1,1 +1,2 @@
+ contains the complexity of task 6 algorithm
 O(log n)
