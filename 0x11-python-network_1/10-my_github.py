@@ -10,4 +10,4 @@ if __name__ == "__main__":
     rep = requests.get("https://api.github.com/user",
                        auth=HTTPBasicAuth(sys.argv[1], sys.argv[2]))
     data = rep.json()
-    print(data["id"])
+    print(data.get("id"))

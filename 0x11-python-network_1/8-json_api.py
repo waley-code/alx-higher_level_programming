@@ -4,9 +4,9 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
+    if len(sys.argv) != 1:
         que = sys.argv[1]
-    else:
+    if len(sys.argv) == 1:
         que = ""
 
     rep = requests.post('http://0.0.0.0:5000/search_user', {"q": que})
