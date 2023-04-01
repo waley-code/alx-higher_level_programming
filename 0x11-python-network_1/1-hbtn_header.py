@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Python script that fetches header from https://alx-intranet.hbtn.io/status"""
+"""Python script that fetches header
+    from https://alx-intranet.hbtn.io/status
+"""
 from urllib import request
 import sys
 
