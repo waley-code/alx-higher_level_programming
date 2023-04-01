@@ -4,10 +4,9 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    rep = requests.get("https://api.github.com/waley-code", auth=(sys.argv[1], sys.argv[2] ))
+    rep = requests.get("https://api.github.com/user",\
+            auth=(sys.argv[1], sys.argv[2] ))
     if rep.status_code == 200:
         data = rep.json()
-        print("User ID:", data["id"])
-    else:
-        print("Error:", rep.status_code)
+        print(data["id"])
 
