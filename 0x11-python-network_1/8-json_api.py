@@ -9,11 +9,11 @@ if __name__ == "__main__":
     else:
         que = ""
 
-    rep = requests.post('http://0.0.0.0:5000/search_user', data={'q': que})
+    rep = requests.post('http://0.0.0.0:5000/search_user', {"q": que})
     try:
         jd = rep.json()
-        if jd:
-            print(f"[{jd.id}] {jd.name}")
+        if jd != {}:
+            print(f"[{jd.get(id)}] {jd.get(name)}")
         else:
             print("No result")
     except ValueError:
