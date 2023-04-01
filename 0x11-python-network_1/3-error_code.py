@@ -10,7 +10,7 @@ from urllib.request import Request
 if __name__ == "__main__":
     try:
         with request.urlopen(Request(sys.argv[1])) as rep:
-            content = response.read().decode("ascii")
+            content = rep.read().decode("ascii")
         print(f"Response body: {content}")
     except error.HTTPError as fp:
         print(f"Error code: {fp.code}")
