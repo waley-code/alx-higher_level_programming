@@ -6,8 +6,8 @@ import sys
 
 if __name__ == "__main__":
     try:
-        with request.urlopen() as rep:
+        with request.urlopen(sys.argv[1]) as rep:
             content = response.read().encode('utf-8')
         print(f"Response body: {content}")
     except error.HTTPError as fp:
-        print("Error code:", fp.code)
+        print(f"Error code: {fp.code}")
