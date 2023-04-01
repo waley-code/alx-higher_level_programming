@@ -5,6 +5,7 @@
 from sys import argv
 import requests
 
+
 if __name__ == "__main__":
     ur = f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits"
     rep = requests.get(ur)
@@ -12,8 +13,5 @@ if __name__ == "__main__":
         com_msg = rep.json()
         for com in range(10):
             sha = com_msg[com].get("sha")
-            name = com_msg[com].get('commit').get('author').get('name')
+            name = com_msg[com].get("commit").get("author").get("name")
             print(f"{sha}: {name}")
-    else:
-        print("Error while trying to retrieve commits.\
-                Error: {}".format(rep.status_code))
