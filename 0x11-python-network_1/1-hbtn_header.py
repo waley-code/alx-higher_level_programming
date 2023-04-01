@@ -7,5 +7,6 @@ import sys
 with request.urlopen(sys.argv[1]) as rep:
     # getting X-Request-Id value from header
     req_id = rep.getheader('X-Request-Id')
+
 # Outpuy the value to screen
 print(req_id)
