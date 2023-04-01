@@ -12,7 +12,7 @@ if __name__ == "__main__":
         com_msg = rep.json()
         for com in range(10):
             sha = com_msg[com].get("sha")
-            name = com_msg[com]['commit']['author']['name']
+            name = com_msg[com].get('commit').get('author').get('name')
             print(f"{sha}: {name}")
     else:
         print("Error while trying to retrieve commits.\
